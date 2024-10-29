@@ -1,0 +1,31 @@
+    1  cd ..
+    2  cd compartido/
+    3  ls
+    4  cd mpi/
+    5  ls
+    6  sudo nano pi_mpi.c 
+    7  mpicc pi_mpi.c -o pi_mpi
+    8  ls
+    9  time mpirun --oversubscribe -np 2 --hostfile ../hostfile ./pi_mpi 100000000
+   10  time mpirun --oversubscribe -np 2 --hostfile ../hostfile ./pi_mpi 1000000000
+   11  time mpirun --oversubscribe -np 2 --hostfile ../hostfile ./pi_mpi 2000000000
+   12  time mpirun --oversubscribe -np 3 --hostfile ../hostfile ./pi_mpi 100000000
+   13  time mpirun --oversubscribe -np 3 --hostfile ../hostfile ./pi_mpi 1000000000
+   14  time mpirun --oversubscribe -np 3 --hostfile ../hostfile ./pi_mpi 2000000000
+   15  time mpirun --oversubscribe -np 4 --hostfile ../hostfile ./pi_mpi 100000000
+   16  time mpirun --oversubscribe -np 4 --hostfile ../hostfile ./pi_mpi 1000000000
+   17  time mpirun --oversubscribe -np 4 --hostfile ../hostfile ./pi_mpi 2000000000
+   18  time mpirun --oversubscribe -np 8 --hostfile ../hostfile ./pi_mpi 100000000
+   19  time mpirun --oversubscribe -np 8 --hostfile ../hostfile ./pi_mpi 1000000000
+   20  time mpirun --oversubscribe -np 8 --hostfile ../hostfile ./pi_mpi 2000000000
+   21  time mpirun --oversubscribe -np 12 --hostfile ../hostfile ./pi_mpi 100000000
+   22  time mpirun --oversubscribe -np 12 --hostfile ../hostfile ./pi_mpi 1000000000
+   23  time mpirun --oversubscribe -np 12 --hostfile ../hostfile ./pi_mpi 2000000000
+   24  time mpirun --oversubscribe -np 16 --hostfile ../hostfile ./pi_mpi 100000000
+   25  time mpirun --oversubscribe -np 16 --hostfile ../hostfile ./pi_mpi 1000000000
+   26  time mpirun --oversubscribe -np 16 --hostfile ../hostfile ./pi_mpi 2000000000
+   27  ls
+   28  whoami
+   29  cd
+   30  ls -laR > archivo1.txt
+   31  history > archivo2.txt
